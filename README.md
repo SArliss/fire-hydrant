@@ -1,5 +1,5 @@
 # Fire Hydrant 
-### Emproyee Social Network 
+### Employee Social Network 
 
 ![HeroImage](./wireframes/hero-image-readme.jpg)
 
