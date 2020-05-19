@@ -1,5 +1,5 @@
 # Fire Hydrant 
-### Social Work Platform 
+### Emproyee Social Network 
 
 ![HeroImage](./wireframes/hero-image-readme.jpg)
 
@@ -7,7 +7,7 @@
 
 ## Overview
 
-_**FIRE HYDRANT** is an internal organization tool that’s a hybrid between an employee directory and social network!_
+_Fire Hydrant is an internal organization web app that’s a hybrid between an employee directory and social network!_
 
 ### Design and Development
 
@@ -22,7 +22,7 @@ It's difficult to stay connected with employees, on a personal and professional 
 
 ## MVP
 
-_The minimum requirement for the fyre hydrant web app is to provide an online portal where users can register and login an account with name and password, then fill out their profile info with "location", "job title" and "about me". All users can post about the projects they are currently working on, and also update or delete the status and description of that project. All users get the ability to comment on posts._
+_The minimum requirement for the fyre hydrant web app is to provide an online portal where users can register and login an account with name and password, then fill out their profile info. All users can post, edit and delete the projects they are working on. Also, all users get the ability to comment on posts._
 
 - Use at least 1 API to call and display information.
 - User profile content suggestions: location, timezone, weather, teams, projects, fun facts, etc.
