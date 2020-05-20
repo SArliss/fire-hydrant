@@ -41,8 +41,13 @@ html {
   font-size: 1.2em;
 }
 
+.login-page section a{
+  color: rgb(98, 7, 134);
+  transition: ease 0.5s;
+}
+
 .login-page section a:hover{
-  color: rgb(157, 94, 228);
+  color: rgb(186, 18, 192);
 }
 
 .login-page-left, .login-page-right{
