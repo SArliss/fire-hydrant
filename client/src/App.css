@@ -168,7 +168,11 @@ html {
   }
 
   .datadog-logo img{
-    max-width: 30%;
+    max-width: 25%;
+  }
+
+  #dog-meeting{
+    width: 80%;
   }
 
   .login-page-right h1{
