@@ -185,7 +185,7 @@ html {
   }
 
   #dog-meeting{
-    width: 80%;
+    width: 75%;
   }
 
   .login-page-right h1{
@@ -198,7 +198,7 @@ html {
   .login-page-right h3{
     font-size: 4vw;
     padding: 0.2em;
-    margin: -0.5em auto;
+    margin: -0.8em auto;
   }
 
   .login-page-left h6{
