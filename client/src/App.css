@@ -191,14 +191,14 @@ html {
   .login-page-right h1{
     font-size: 8.5vw;
     padding: 0.2em;
-    margin: 0 auto;
+    margin: -0.5em auto -0.4em auto;
     letter-spacing: -0.01em;
   }
 
   .login-page-right h3{
     font-size: 4vw;
     padding: 0.2em;
-    margin: -0.8em auto;
+    margin: -0.5em auto;
   }
 
   .login-page-left h6{
