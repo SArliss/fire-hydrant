@@ -117,13 +117,13 @@ _The goal is to have a 100% functioning full stack app that shows both our techn
 - _Followers_
   <br>
 - _Upload image instead of image url_
-  - Profile picture.
-  - Project image.
+  - Profile picture
+  - Project image
   <br>
 - _Chat Functionality_
-  - Real time message to another users.
+  - Real time message to another users
   <br>
-- _Google maps integration with location_.
+- _Google maps integration with location_
 
 ## Technology / Resources used
 
