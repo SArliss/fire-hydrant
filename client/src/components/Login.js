@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../images/datadog-logo.png';
+import dogs from '../images/dog-meeting.jpg';
 
 export default class Login extends Component {
   constructor(props) {
@@ -23,34 +25,50 @@ export default class Login extends Component {
         {this.props.currentUser ?
           <div className="logged-in">
             <h5>Status: Active / Logged-in.</h5>
+            <h5>><Link to="/user">Main Page</Link></h5>
           </div>
           :
-          <div className="login-form">
-            <form onSubmit={(e) => this.props.handleLogin(e, this.state)}>
-              <h2>Login</h2>
-              {this.state.errorText && <p className="error-text">{this.state.errorText}</p>}
-              <label htmlFor="email">Email</label>
-              <br></br>
-              <input
-                type="text"
-                name="email"
-                value={this.state.email}
-                onChange={this.handleChange}
-              />
-              <br></br>
-              <label htmlFor="password">Password</label>
-              <br></br>
-              <input
-                type="password"
-                name="password"
-                value={this.state.password}
-                onChange={this.handleChange}
-              />
-              <br></br>
-              <button>Submit</button>
-              <br></br>
-              <Link to="/register">Register</Link>
-            </form>
+          <div className="login-page">
+            <div className="login-page-left">
+              <img src={dogs} alt="dog reunion" id="dog-meeting"></img>
+              <div className="login-form">
+                <form onSubmit={(e) => this.props.handleLogin(e, this.state)}>
+                  {this.state.errorText && <p className="error-text">{this.state.errorText}</p>}
+                  <br></br>
+                  <input
+                    type="text"
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                    placeholder="Email"
+                  />
+                  <br></br>
+                  <input
+                    type="password"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                    placeholder="Password"
+                  />
+                  <br></br>
+                  <button>LOGIN</button>
+                  <br></br>
+                  <section>
+                    <div className="or-section"><p>or</p></div>
+                    <Link to="/register"><p>Create a new account</p></Link>
+                  </section>
+                </form>
+              </div>
+            </div>
+
+            <div className="login-page-right">
+              <div className="datadog-logo">
+                <img src={logo} alt="datadog logo" ></img>
+              </div>
+              <h1>Welcome to the pack!</h1>
+              <h3>Sign in or register for a new account to start talking to other top dogs.</h3>
+            </div>
+
           </div>
         }
       </div>

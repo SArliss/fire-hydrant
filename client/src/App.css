@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  display: block;
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.App {
+  font-family: 'Spartan', serif;
+  color: rgb(41, 41, 43);
+  background-color: white;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+/* LOGIN */
+.login-page{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  color: rgb(98, 7, 134);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.login-page p{
+  font-size: 1.2em;
+}
+
+.login-page section a:hover{
+  color: rgb(157, 94, 228);
+}
+
+.login-page-left, .login-page-right{
+  flex: 50%;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+.login-page-left{
+  text-align: center;
+}
+
+.login-page-right{
+  text-align: left;
+}
+
+.login-page-right h1{
+  font-size: 6vw;
+  padding-right: 10vw;
+  margin: 0;
+}
+
+.login-page-right h3{
+  font-size: 1.6em;
+  font-weight: 400;
+  padding-right: 10vw;
+}
+
+.login-form{
+  margin: 0 auto;
+}
+
+#dog-meeting{
+  width: 90%;
+}
+
+.datadog-logo{
+  max-width: 60%;
+}
+
+.datadog-logo img{
+  max-width: 50%;
+}
+
+.login-page input {
+  padding: 1em;
+  background-color: rgb(215, 211, 240);
+  border: none;
+  border-radius: 0.2em;
+  color: rgb(98, 7, 134);
+  font-size: 1em;
+  margin: 0.3em auto;
+  width: 70%;
+  opacity: 1;
+  font-style: italic;
+}
+
+.login-page button {
+  padding: 1em;
+  border: 0.07em solid rgb(98, 7, 134);
+  border-radius: 0.3em;
+  background-color: white;
+  color: rgb(98, 7, 134);
+  font-size: 1em;
+  margin: 0.3em auto;
+  width: 70%;
+  opacity: 1;
+  font-weight: 600;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.login-page button:hover {
+  background-color: rgb(98, 7, 134);
+  color: white;
+}
+
+.login-page section {
+  margin: 0 auto;
+  width: 72%;
+}
+
+.or-section p{
+  display: flex; 
+  flex-direction: row;
+}
+
+.or-section p:before, .or-section p:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 0.01em solid rgb(98, 7, 134);
+  margin: 0.4em;
+}
+
+::placeholder{
+  color: rgb(98, 7, 134);
+  opacity: 1;
+  font-style: italic;
+}
+
+/* SMALL SCREEN */
+@media only screen and (max-width: 769px) {
+  .login-page{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding: 0.2em auto 0.5em auto;
+  }
+
+  .login-page-left, .login-page-right{
+    flex: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .datadog-logo {
+    max-width: 100%;
+  }
+
+  .datadog-logo img{
+    max-width: 30%;
+  }
+
+  .login-page-right h1{
+    font-size: 5vw;
+    padding-right: 1em;
+  }
+
+  .login-page-right h3{
+    font-size: 4vw;
+    padding-right: 1em;
+  }
+
+  .login-page input, .login-page button{
+    padding: 0.5em;
+    margin: 0.2em auto;
+    width: 80%;
+  }
+
+  .login-page section {
+    width: 84%;
+  }
+
+}
+
+
+
