@@ -31,6 +31,7 @@ export default class Login extends Component {
           <div className="login-page">
             <div className="login-page-left">
               <img src={dogs} alt="dog reunion" id="dog-meeting"></img>
+              <h6>Copyright 2016 The New Yorker Image by Danny Shanahan. <br></br>All Rights Reserved.</h6>
               <div className="login-form">
                 <form onSubmit={(e) => this.props.handleLogin(e, this.state)}>
                   {this.state.errorText && <p className="error-text">{this.state.errorText}</p>}
