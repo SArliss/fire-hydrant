@@ -23,7 +23,7 @@ html {
   to   { opacity: 1}
 }
 
-/* LOGIN */
+/* LOGIN and REGISTER */
 .login-page{
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +60,7 @@ html {
   text-align: center;
 }
 
-.login-page-left h6{
+.login-page h6{
   text-align: left;
   color: rgb(50, 50, 50);
   font-size: 0.6em;
@@ -73,18 +73,54 @@ html {
   text-align: left;
 }
 
-.login-page-right h1{
+.login-page-right h1 {
   font-size: 6vw;
   padding-right: 10vw;
   margin: 0;
   font-family: 'Anton', sans-serif;
+  color: #632CA6;
+}
+
+.register h1{
+  font-size: 4vw;
+  padding: 0.1em;
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  color: #632CA6;
 }
 
 .login-page-right h3{
   font-size: 1.6em;
   font-weight: 400;
   padding-right: 10vw;
-  color: #5B35A0;
+  color: #632CA6;
+}
+
+.register h3{
+  font-size: 2vw;
+  font-weight: 400;
+  padding: 0.1em;
+  color: #632CA6;
+  margin: 0;
+}
+
+.register header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.datadog-logo-register{
+  max-width: 15%;
+}
+
+.datadog-logo-register img{
+  max-width: 100%;
+}
+
+.header-description{
+  display: flex;
+  flex-direction: column;
 }
 
 .login-form{
@@ -95,12 +131,16 @@ html {
   width: 90%;
 }
 
+#dog-by-computer{
+  width: 80%;
+}
+
 .datadog-logo{
-  max-width: 60%;
+  max-width: 50%;
 }
 
 .datadog-logo img{
-  max-width: 50%;
+  max-width: 40%;
 }
 
 .login-page input {
@@ -212,6 +252,15 @@ html {
 
   .login-page section {
     width: 84%;
+  }
+
+  .register h1{
+    padding: 0.2em;
+    font-size: 6vw;
+  }
+
+  .register h3{
+    font-size: 3vw;
   }
 
 }
