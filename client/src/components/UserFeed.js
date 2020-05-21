@@ -10,9 +10,9 @@ export default function UserFeed () {
           <div className="user-feed">
               <FeedForm/>
               </div>
-          {/* <div className="user-feed-announcements">
+          <div className="user-feed-announcements">
             <Announcements/>
-          </div> */}
+          </div>
 
      </div>
 )

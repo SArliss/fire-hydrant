@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import DogPic from '../images/Dog1.jpeg';
+
 
 export default class FeedForm extends Component {
     constructor(props) {
@@ -7,18 +9,44 @@ export default class FeedForm extends Component {
       render (){
 
     return (
-      <div className="Feed-form">
-     <form>
-        
-    <label>
-  
-    Create New Post
-    <input type="text" name="Create Post" placeholder="What do you want to share?" />
-    </label>
-    <input className ="post-button" type="submit" value="Post" style={{backgroundColor:"#5B35A0"}} />
-    </form>
-
+      <div className="Feed-form-container" style={{ marginLeft: "2rem", marginRight:"4rem"}}>
+       
+        <div className="title" style={{ padding:'10px', color:"#622DA5", fontSize:"17px", fontWeight:"700"}}>
+        Create New Post
+        <hr/>
         </div>
+
+      <div className="post-form">
+    
+      <div className= "user-profile-picture">
+          <img className ="profile-picture" src={DogPic} alt="prof-pic"></img>
+          </div>         
+       <div className="post-name" style={{marginLeft:'2rem'}}>
+          <h3> Derek Frank</h3>
+          </div>
+          <div class="dropdown">
+  <button class="dropbtn">Home Office</button>
+  <div class="dropdown-content">
+    <a href="#">Home Office</a>
+    <a href="#">Main Office</a>
+    <a href="#">Out of Town</a>
+  </div>
+</div>       
+   
+
+          <form> 
+            <div className="text-Area">
+          <textarea rows="8">
+      What do you want to share?
+</textarea>
+</div>
+      <input className="form-button" type="submit" value="Post" />
+    </form>
+    </div>
+      
+      </div>
+
+      
 
     ) 
   }

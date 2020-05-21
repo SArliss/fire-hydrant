@@ -38,6 +38,7 @@ function Header(props) {
             <Link to="/create-post"><button className ="userButtons">Create post</button></Link>
             <Link to="/user-posts"><button className ="userButtons">See my posts</button></Link>
           </div>
+          <br />
           
           <div className = "user-pack">
             <hr />
@@ -45,6 +46,7 @@ function Header(props) {
          <img src = {InvitePic} alt="invite-pic" />
      <h4> Add teammates for group messaging</h4>
      <hr />
+     <br/>
 </div>
 
          <div className = "user-bow">
