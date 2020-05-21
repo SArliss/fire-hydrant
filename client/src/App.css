@@ -200,12 +200,19 @@ html {
 }
 
 /*User Page */
+.Feed-form {
+  border: 1px solid black;
+}
 
-
+p {
+  color: white;
+  font-size: 22px;
+}
 .user-page {
   display: flex;
   flex-direction: row;
 }
+
 .user-page-aside{
   display: flex;
   flex-direction: column;
@@ -216,6 +223,7 @@ html {
 
 .user-page-header {
   width:20%;
+  margin-left: 3rem;
   background: rgb(99,44,166);
   background: linear-gradient(180deg, rgba(99,44,166,1) 35%, rgba(133,29,161,1) 100%);
   color: white;
@@ -223,12 +231,37 @@ html {
 
 .user-profile-picture {
   width: 60%;
-  border-radius: 10rem;
-  margin-left: center;
+  border-radius: 20rem;
+  margin-left: 3em;
 }
 
 .userButtons {
   border-radius: 1em;
+  background-color: #5B35A0;
+  color: white;
+  border: 2px solid white;
+  padding: 5px;
+  }
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-buttons{
+  margin: 2rem;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 12px;
+  color: #5B35A0;
+  border: 3px solid #5B35A0;
+}
+
+.nav-buttons:hover {
+  margin: 2rem;
+  color:white;
+  background-color: #5B35A0;
 }
 
 /* SMALL SCREEN */

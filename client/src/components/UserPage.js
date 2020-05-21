@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DogPic from '../images/Dog1.jpeg';
+import BowPic from '../images/Group18.svg'
+import InvitePic from '../images/Group51.svg'
+import Navbar from './Navbar'
+import UserFeed from './UserFeed'
 
 function Header(props) {
   return (
@@ -15,7 +19,7 @@ function Header(props) {
           </div >
 
           <div className= "user-profile-picture">
-          <img className ="user-profile-picture" src={DogPic}></img>
+          <img className ="user-profile-picture" src={DogPic} alt="prof-pic"></img>
           </div>
 
           <div className="greeting">
@@ -23,10 +27,10 @@ function Header(props) {
             {/* <h1>{localStorage.getItem('name')}</h1> */}
             
             <h3>Solutions Engineer</h3>
-            {/* <h1>{localStorage.getItem('name')}</h1> */}
+            {/* <h1>{localStorage.getItem('position')}</h1> */}
             
             <h3>New York, NY</h3>
-            {/* <h1>{localStorage.getItem('name')}</h1> */}
+            {/* <h1>{localStorage.getItem('location')}</h1> */}
             
           </div>
 
@@ -38,12 +42,14 @@ function Header(props) {
           <div className = "user-pack">
             <hr />
             <h1> Current Pack</h1>
+         <img src = {InvitePic} alt="invite-pic" />
      <h4> Add teammates for group messaging</h4>
      <hr />
 </div>
 
-<div className = "user-bow">
+         <div className = "user-bow">
   <h1> Bow</h1>
+  <img src ={BowPic} alt="bow-pic" />
   <h3> Messages</h3>
 <h4> Add teammates for group messaging</h4>
 </div>
@@ -62,7 +68,8 @@ function Header(props) {
     </header>
     
     <div className = "user-page-feed">
-      <h2> Feed</h2>
+      <Navbar/>
+      <UserFeed/>
     </div>
     </div>
 
