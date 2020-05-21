@@ -89,6 +89,7 @@ html {
   color: #632CA6;
 }
 
+
 .login-page-right h3{
   font-size: 1.6em;
   font-weight: 400;
@@ -200,14 +201,43 @@ html {
 }
 
 /*User Page */
-.Feed-form {
-  border: 1px solid black;
-}
+
+
+.greeting h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  }
+
+.greeting h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18x;
+  text-align: center;
+      }
+  
 
 p {
-  color: white;
-  font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 38px;
+    text-align: center;
+    color: white;
+    }
+
+.user-pack h1, .user-bow h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
 }
+
 .user-page {
   display: flex;
   flex-direction: row;
@@ -234,7 +264,6 @@ p {
   border-radius: 20rem;
   margin-left: 3em;
 }
-
 .userButtons {
   border-radius: 1em;
   background-color: #5B35A0;
@@ -242,7 +271,14 @@ p {
   border: 2px solid white;
   padding: 5px;
   }
+.user-posts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}  
 
+
+/* Nav bar  */
 .navbar{
   display: flex;
   flex-direction: row;
@@ -257,11 +293,38 @@ p {
   color: #5B35A0;
   border: 3px solid #5B35A0;
 }
-
 .nav-buttons:hover {
   margin: 2rem;
   color:white;
   background-color: #5B35A0;
+}
+
+/* User Feed */
+.user-feed-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Feed-form {
+  border: 1px solid black;
+  width: 30vw;
+  height: 10vw;
+  display: flex; 
+  justify-content: center;
+  padding-top: 1vh;
+  margin-left: 4rem;
+}
+
+/*Announcements  */
+.Announcement {
+  display: flex;
+  flex-direction: row;
+  width: 30%
+
+}
+
+.Announcement-picture {
+height: 10%
 }
 
 /* SMALL SCREEN */
