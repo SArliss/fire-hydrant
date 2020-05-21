@@ -199,6 +199,38 @@ html {
   font-style: italic;
 }
 
+/*User Page */
+
+
+.user-page {
+  display: flex;
+  flex-direction: row;
+}
+.user-page-aside{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: -1em;
+  text-align: center;
+}
+
+.user-page-header {
+  width:20%;
+  background: rgb(99,44,166);
+  background: linear-gradient(180deg, rgba(99,44,166,1) 35%, rgba(133,29,161,1) 100%);
+  color: white;
+}
+
+.user-profile-picture {
+  width: 60%;
+  border-radius: 10rem;
+  margin-left: center;
+}
+
+.userButtons {
+  border-radius: 1em;
+}
+
 /* SMALL SCREEN */
 @media only screen and (max-width: 769px) {
   .login-page{
