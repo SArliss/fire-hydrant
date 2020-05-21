@@ -28,7 +28,7 @@ export default class FeedForm extends Component {
 
           <form> 
             <div className="text-Area">
-          <textarea rows="8" columns="50">
+          <textarea rows="8" >
       What do you want to share?
 </textarea>
 </div>
