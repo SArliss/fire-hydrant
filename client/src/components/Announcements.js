@@ -19,7 +19,7 @@ export default class Announcements extends Component {
 
                
                 </div>
-                <h2> David T. Dog</h2>
+                <h2> Derek Dog</h2>
                 <h3> Software Engineer
                     <br/>
                     San Francisco

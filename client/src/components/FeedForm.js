@@ -16,35 +16,27 @@ export default class FeedForm extends Component {
         <hr/>
         </div>
 
-      <div className="post-form">
-    
-      <div className= "user-profile-picture">
-          <img className ="profile-picture" src={DogPic} alt="prof-pic"></img>
-          </div>         
-       <div className="post-name" style={{marginLeft:'2rem'}}>
-          <h3> Derek Frank</h3>
-          </div>
-          <div class="dropdown">
+          {/* <div class="dropdown">
   <button class="dropbtn">Home Office</button>
   <div class="dropdown-content">
     <a href="#">Home Office</a>
     <a href="#">Main Office</a>
     <a href="#">Out of Town</a>
   </div>
-</div>       
+</div>        */}
    
 
           <form> 
             <div className="text-Area">
-          <textarea rows="8">
+          <textarea rows="8" columns="50">
       What do you want to share?
 </textarea>
 </div>
-      <input className="form-button" type="submit" value="Post" />
+      <input className="form-button" type="submit" value="Post" marginRight="-2rem" />
     </form>
     </div>
       
-      </div>
+    
 
       
 
