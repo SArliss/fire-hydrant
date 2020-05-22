@@ -59,7 +59,7 @@ export default class Login extends Component {
                     <Link to="/register"><p>Create a new account</p></Link>
                   </section>
                 </form>
-              </div>
+              </div>   
             </div>
 
             <div className="login-page-right">
