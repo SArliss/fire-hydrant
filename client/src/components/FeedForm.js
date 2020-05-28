@@ -36,7 +36,10 @@ export default class FeedForm extends Component {
       What do you want to share?
 </textarea>
 </div>
-      <div className="icons">
+
+  <div className="feed-bottom">
+
+      <div className="feed-icons">
       <img src={Face} alt="Face"></img>
       <img src={Camera} alt="Camera"></img>
       <img src={Link} alt="Link"></img>
@@ -44,7 +47,10 @@ export default class FeedForm extends Component {
 
 
       </div>
-      <input className="form-button" type="submit" value="Post" marginRight="-2rem" />
+      <input className="form-button" type="submit" value="Post" />
+
+      </div>
+      
     </form>
     </div>
       
