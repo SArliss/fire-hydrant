@@ -257,7 +257,7 @@ html {
   width:20%;
   margin-left: 3rem;
   background: rgb(99,44,166);
-  background: linear-gradient(180deg, rgba(98,45,165,1) 35%, rgba(162,67,153,1) 100%);
+  background: linear-gradient(180deg, rgba(98,45,165,1) 20%, rgba(162,67,153,1) 100%);
   color: white;
 }
 
@@ -281,6 +281,29 @@ html {
 }  
 
 
+/*User Feed */
+
+.feed-bottom {
+display: flex;
+flex-direction: row;
+
+
+}
+
+.feed-icons img {
+width: 4%;
+margin: 1rem;
+}
+
+.form-button { 
+border-radius: 1rem;
+padding-left: 20px;
+padding-right: 20px;
+font-weight: 700;
+
+}
+
+
 /* Nav bar  */
 .navbar{
   display: flex;
@@ -300,6 +323,7 @@ html {
   margin: 2rem;
   color:white;
   background-color: #5B35A0;
+  background: linear-gradient(90deg, rgba(98,45,165,1) 5%, rgba(162,67,153,1) 100%);
 }
 
 /* User Feed */

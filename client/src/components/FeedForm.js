@@ -1,5 +1,9 @@
 import React, {Component} from 'react'
 import DogPic from '../images/Dog1.jpeg';
+import Camera from '../icons/camera.png'
+import Face from '../icons/face.svg'
+import Link from '../icons/link.svg'
+import Page from '../icons/page.svg'
 
 
 export default class FeedForm extends Component {
@@ -32,7 +36,21 @@ export default class FeedForm extends Component {
       What do you want to share?
 </textarea>
 </div>
-      <input className="form-button" type="submit" value="Post" marginRight="-2rem" />
+
+  <div className="feed-bottom">
+
+      <div className="feed-icons">
+      <img src={Face} alt="Face"></img>
+      <img src={Camera} alt="Camera"></img>
+      <img src={Link} alt="Link"></img>
+      <img src={Page} alt="Page"></img>
+
+
+      </div>
+      <input className="form-button" type="submit" value="Post" />
+
+      </div>
+      
     </form>
     </div>
       
