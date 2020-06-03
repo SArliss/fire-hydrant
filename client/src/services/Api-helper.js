@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
   // baseURL: "http://localhost:3000"
-  baseURL: "https://pure-island-69489.herokuapp.com"
+  baseURL: "https://guarded-sea-27397.herokuapp.com"
 })
 
 // LOGIN
@@ -49,4 +49,13 @@ export const verifyUser = () => {
   }
 }
 
+// get all users
+export const getUsers = async () => {
+  try {
+    const resp = await api.get('/users');
+    console.log(resp);
+  } catch (e) {
+    console.log(e.response);
+  }
+}
 

@@ -19,7 +19,6 @@ export default class Login extends Component {
   }
 
   render() {
-    console.log(this.props.currentUser);
     return (
       <div>
         {this.props.currentUser ?
