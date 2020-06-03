@@ -42,7 +42,7 @@ html {
   animation: spin 2s linear infinite;
 }
 
-/* LOGIN */
+/* LOGIN and REGISTER*/
 
 .logged-in{
   margin: 1em;
@@ -218,42 +218,6 @@ html {
   color: rgb(98, 7, 134);
   opacity: 1;
   font-style: italic;
-}
-
-/* REGISTER */
-
-.register h1{
-  font-size: 4vw;
-  padding: 0.1em;
-  margin: 0;
-  font-family: 'Anton', sans-serif;
-  color: #632CA6;
-}
-
-.register h3{
-  font-size: 2vw;
-  font-weight: 400;
-  padding: 0.1em;
-  color: #632CA6;
-  margin: 0;
-}
-
-.register header{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.datadog-logo-register{
-  max-width: 15%;
-}
-
-.datadog-logo-register img{
-  max-width: 100%;
-}
-
-#dog-by-computer{
-  width: 80%;
 }
 
 
@@ -483,7 +447,13 @@ height: 10%
 .header-logo{
   display: block;
   text-align: left;
-  width: 25vw;
+  width: 100vw;
+}
+
+.header-logo img{
+  display: block;
+  text-align: left;
+  width: 25%;
 }
 
 .login-page header{
