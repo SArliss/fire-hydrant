@@ -9,6 +9,9 @@
 
 _Fire Hydrant is an internal organization web app that’s a hybrid between an employee directory and social network!_
 
+##### Demo
+- http://fire-hydrant.surge.sh
+
 ### Design and Development
 
 Designed by Simone Tobias and 
@@ -148,7 +151,7 @@ _Frontend_
 - Axios
 - Node.js
 - Google Fonts
-- AWS (deployment)
+- Surge (deployment)
 
 ---
 
