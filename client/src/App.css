@@ -76,6 +76,8 @@ html {
 
 .header-logo{
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   margin: 0;
   padding: 0.1em;
 }
@@ -481,7 +483,7 @@ height: 10%
 }
 
 .header-logo img{
-  width: 20vw;
+  width: 20%;
   margin: 0 0.5em;
   padding: 0 0.1em;
 }
