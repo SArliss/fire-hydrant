@@ -53,14 +53,14 @@ export default class Register extends Component {
                   name="first_img"
                   value={this.state.first_img}
                   onChange={this.handleChange}
-                  placeholder="Primary Image"
+                  placeholder="Primary Image URL"
                 />
                 <input
                   type="text"
                   name="second_img"
                   value={this.state.second_img}
                   onChange={this.handleChange}
-                  placeholder="Secondary Image"
+                  placeholder="Secondary Image URL"
                 />
               </section>
               <br></br>
