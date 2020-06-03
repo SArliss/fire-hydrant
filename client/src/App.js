@@ -69,6 +69,11 @@ class App extends React.Component {
     localStorage.removeItem('name');
     localStorage.removeItem('email');
     localStorage.removeItem('id');
+    localStorage.removeItem('location');
+    localStorage.removeItem('position');
+    localStorage.removeItem('fun_facts');
+    localStorage.removeItem('first_img');
+    localStorage.removeItem('second_img');
   }
 
   componentDidMount() {
@@ -77,7 +82,12 @@ class App extends React.Component {
       const id = parseInt(localStorage.getItem('id'));
       const username = localStorage.getItem('name');
       const email = localStorage.getItem('email');
-      const user = { username, email, id };
+      const location = localStorage.getItem('location');
+      const position = localStorage.getItem('position');
+      const fun_facts = localStorage.getItem('fun_facts');
+      const first_img = localStorage.getItem('first_img');
+      const second_img = localStorage.getItem('second_img');
+      const user = { username, email, id, location, position, fun_facts, first_img, second_img };
       user && this.setState({
         currentUser: user
       })
@@ -88,6 +98,15 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+
+        <div className="loading-message">
+          {this.state.isLogging &&
+            <div>
+              <div className="loader"></div>
+              <p>Logging...</p>
+            </div>}
+          {this.state.errorText && <p className="error">{this.state.errorText}</p>}
+        </div>
 
         <Route exact path="/" render={() => (
           <Login
@@ -109,20 +128,11 @@ class App extends React.Component {
           />
         )} />
 
-        <div className="loading-message">
-          {this.state.isLogging &&
-            <div>
-              <div className="loader"></div>
-              <p>Logging...</p>
-            </div>}
-          {this.state.errorText && <p className="error">{this.state.errorText}</p>}
-        </div>
-
         <Route path="/register" render={() => (
           <Register
             handleRegister={this.handleRegister}
-            errorText={this.state.errorText}
             currentUser={this.state.currentUser}
+            errorText={this.state.errorText}
           />
         )} />
 

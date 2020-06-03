@@ -25,18 +25,24 @@ export const loginUser = async (loginData) => {
 // REGISTER
 export const registerUser = async (registerData) => {
   try {
-    const resp = await api.post('/register', registerData);
+    const resp = await api.post('/signup', registerData);
     console.log(resp);
     api.defaults.headers.common.authorization = `Bearer ${resp.data.auth_token}`;
     localStorage.setItem('authToken', resp.data.auth_token);
     localStorage.setItem('id', resp.data.user.id);
     localStorage.setItem('name', resp.data.user.name);
     localStorage.setItem('email', resp.data.user.email);
+    localStorage.setItem('location', resp.data.user.location);
+    localStorage.setItem('position', resp.data.user.position);
+    localStorage.setItem('fun_facts', resp.data.user.fun_facts);
+    localStorage.setItem('first_img', resp.data.user.first_img);
+    localStorage.setItem('second_img', resp.data.user.second_img);
     return resp.data.user;
   } catch (e) {
-    console.log(e.response);
     if (e.response.status === 422) {
       return { errorMessage: "Email is already associated with a user, please login to continue" }
+    } else {
+      console.log(e);
     }
   }
 }

@@ -10,7 +10,12 @@ export default class Register extends Component {
     this.state = {
       name: "",
       email: "",
-      password: ""
+      password: "",
+      location: "",
+      position: "",
+      fun_facts: "",
+      first_img: "",
+      second_img: "",
     }
   }
 
@@ -45,15 +50,15 @@ export default class Register extends Component {
               <section className="uploading-images">
                 <input
                   type="text"
-                  name="primaryImage"
-                  value={this.state.primaryImage}
+                  name="first_img"
+                  value={this.state.first_img}
                   onChange={this.handleChange}
                   placeholder="Primary Image"
                 />
                 <input
                   type="text"
-                  name="secondaryImage"
-                  value={this.state.secondaryImage}
+                  name="second_img"
+                  value={this.state.second_img}
                   onChange={this.handleChange}
                   placeholder="Secondary Image"
                 />
@@ -77,7 +82,7 @@ export default class Register extends Component {
               <br></br>
               <input
                 type="text"
-                name="Location"
+                name="location"
                 value={this.state.location}
                 onChange={this.handleChange}
                 placeholder="Location"
@@ -93,8 +98,8 @@ export default class Register extends Component {
               <br></br>
               <input
                 type="text"
-                name="funFacts"
-                value={this.state.funFacts}
+                name="fun_facts"
+                value={this.state.fun_facts}
                 onChange={this.handleChange}
                 placeholder="Fun Facts"
               />
