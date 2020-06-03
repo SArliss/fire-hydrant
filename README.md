@@ -10,7 +10,9 @@
 _Fire Hydrant is an internal organization web app that’s a hybrid between an employee directory and social network!_
 
 ##### Demo
-- http://fire-hydrant.surge.sh
+- Live Version: http://fire-hydrant.surge.sh
+- Backend Git repo: https://github.com/SArliss/fire-hydrant-backend
+- Backend deployed: https://guarded-sea-27397.herokuapp.com
 
 ### Design and Development
 
@@ -84,7 +86,7 @@ src
       |__ DeletePost.js
       |__ Comments.js
 |__ services/
-      |__ ApiHelper.js
+      |__ Api-helper.js
 
 ```
 
@@ -111,7 +113,7 @@ database_db
 
 ## Goals & Challenges
 
-_The goal is to have a 100% functioning full stack app that shows both our technical skills as a good eye for creativity and responsive design.
+ The goal is to have a 100% functioning full stack app that shows both our technical skills as a good eye for creativity and responsive design.
 
 ## Post-MVP - Stretch Goals
 
@@ -155,7 +157,7 @@ _Frontend_
 
 ---
 
-## Backend
+## Backend Git Repo
 https://github.com/SArliss/fire-hydrant-backend
 
 ## Project Delivery
