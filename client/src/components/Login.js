@@ -20,14 +20,14 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="login-page">
         {this.props.currentUser ?
           <div className="logged-in">
             <h5>Status: Active / Logged-in.</h5>
             <h5><Link to="/user">Main Page</Link></h5>
           </div>
           :
-          <div className="login-page">
+          <div>
 
             <header>
               <div className="header-logo">
@@ -42,7 +42,7 @@ export default class Login extends Component {
             <main>
               <form className="login-form" onSubmit={(e) => this.props.handleLogin(e, this.state)}>
                 {this.state.errorText && <p className="error-text">{this.state.errorText}</p>}
-                <br></br>
+               
                 <input
                   type="text"
                   name="email"
@@ -50,7 +50,7 @@ export default class Login extends Component {
                   onChange={this.handleChange}
                   placeholder="Email"
                 />
-                <br></br>
+      
                 <input
                   type="password"
                   name="password"
@@ -58,11 +58,9 @@ export default class Login extends Component {
                   onChange={this.handleChange}
                   placeholder="Password"
                 />
-                <br></br>
 
                 <button>LOGIN</button>
-                <br></br>
-
+                
                 <section>
                   <div className="or-section"><p>or</p></div>
                   <Link to="/register"><p>Create a new account</p></Link>

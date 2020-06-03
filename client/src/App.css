@@ -1,13 +1,8 @@
-* {
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
 html {
-  margin: 0;
-  padding: 0;
   display: block;
   width: 100vw;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -15,10 +10,15 @@ html {
 }
 
 .App {
+  display: block;
+  width: 100vw;
+  min-height: 100vh;
   font-family: 'Spartan', serif;
   color: rgb(41, 41, 43);
   background-color: white;
   animation: fadein 2s;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 @keyframes fadein {
@@ -50,9 +50,13 @@ html {
   font-size: large;
 }
 
+.login-page *{
+  box-sizing: border-box;
+}
+
 .login-page {
-  margin: 0 auto;
-  padding: 1em;
+  margin: 0.5em auto;
+  padding: 0;
   color: #632CA6;
   font-family: 'Baskervville', serif;
 }
@@ -74,14 +78,6 @@ html {
   width: 100vw;
 }
 
-.header-logo{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin: 0;
-  padding: 0.1em;
-}
-
 .header-title{
   display: flex;
   flex-wrap: wrap;
@@ -90,9 +86,15 @@ html {
   padding: 0.1em;
 }
 
+.header-logo{
+  margin: 0;
+  padding: 0;
+  width: 15vw;
+}
+
 .header-logo img{
-  width: 12vw;
-  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .login-page header h1 {
@@ -110,12 +112,10 @@ html {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
   align-content: center;
-  justify-content: center;
   margin: 0 auto;
-  width: 100%;
+  width: 100vw;
 }
 
 .login-picture{
@@ -123,7 +123,7 @@ html {
   flex-wrap: wrap;
   flex-direction: column;
   margin: 0.1vw;
-  padding: 0.1vw;
+  padding: 1vw;
   width: 40%;
 }
 
@@ -132,36 +132,38 @@ html {
 }
 
 .login-picture h6{
-  text-align: left;
+  text-align: right;
   color: rgb(50, 50, 50);
   font-size: 0.6em;
   font-weight: 300;
-  margin: 0.1em auto;
+  margin: 0 auto;
+  padding-right: 5vw;
+  width: 100%;
 }
 
 .login-form{
   display: flex;
   flex-direction: column;
-  margin: 0.1vw 1vw;
-  padding: 0.1vw 1vw;
-  width: 40%;
+  margin: 0.1vw;
+  padding: 1vw;
+  width: 30%;
 }
 
 .login-form input {
-  padding: 1em;
+  padding: 1.2em 0;
   background-color: rgb(215, 211, 240);
   border: none;
   border-radius: 0.2em;
   color: rgb(98, 7, 134);
   font-size: 1em;
-  margin: 0 auto;
+  margin: 0.8vw auto;
   width: 100%;
   opacity: 1;
   font-style: italic;
 }
 
 .login-form button {
-  padding: 1em;
+  padding: 1.2em 0;
   border: 0.07em solid rgb(98, 7, 134);
   border-radius: 0.3em;
   background-color: white;
@@ -173,6 +175,10 @@ html {
   font-weight: 600;
   cursor: pointer;
   transition: ease 0.5s;
+}
+
+.login-form input[type="text"], .login-form input[type="password"] {
+  padding-left: 1em;
 }
 
 .login-form button:hover {
@@ -474,59 +480,50 @@ height: 10%
 
 /* LOGIN */
 
+.header-logo{
+  display: block;
+  text-align: left;
+  width: 25vw;
+}
+
 .login-page header{
-  flex-direction: column;
-}
-
-.header-logo {
-  width: 100vw;
-}
-
-.header-logo img{
-  width: 20%;
-  margin: 0 0.5em;
-  padding: 0 0.1em;
+  padding: 0.5em 1em;
+  margin: 0;
+  text-align: left;
 }
 
 .login-page header h1 {
-  font-size: 11vw;
-  margin: 0 0.3em;
-  padding: 0 0.1em;
-  line-height: 1.3em;
-  overflow-y: hidden;
+  font-size: 9vw;
 }
 
 .login-page header h3 {
-  font-size: 4vw;
-  margin: 0 0.1em;
-  padding: 0.2em 1em;
+  font-size: 4.5vw;
 }
 
 .login-page main{
   flex-direction: column;
+  margin: 1em auto;
+  width: 95vw;
+}
+
+.login-form{
   width: 100%;
+}
+
+.login-form input, .login-form button{
+  padding: 1em 0;
+  margin: 1vw auto;
 }
 
 .login-picture{
   width: 100%;
-  margin: -0.5em 0.5em 1em 0.5em;
 }
 
 .login-picture h6{
   font-size: 0.5em;
 }
 
-.login-form{
-  display: flex;
-  flex-direction: column;
-  margin: 0 0.7em;
-  padding: 0 1em;
-  width: 100%;
-}
 
-.or-section{
-  margin: -1em 0;
-}
 
 }
 
