@@ -14,6 +14,11 @@ export const loginUser = async (loginData) => {
     localStorage.setItem('id', resp.data.user.id);
     localStorage.setItem('name', resp.data.user.name);
     localStorage.setItem('email', resp.data.user.email);
+    localStorage.setItem('location', resp.data.user.location);
+    localStorage.setItem('position', resp.data.user.position);
+    localStorage.setItem('fun_facts', resp.data.user.fun_facts);
+    localStorage.setItem('first_img', resp.data.user.first_img);
+    localStorage.setItem('second_img', resp.data.user.second_img);
     return resp.data.user;
   } catch (e) {
     if (e.response && e.response.status === 401) {

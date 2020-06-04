@@ -257,15 +257,6 @@ html {
  color: white;
 }
 
-.user-feed {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-left: 20vw;
-  padding: 2em 3em;
-  background-color:rgb(250, 250, 250);
-}
-
 .user-profile {
   position: absolute;
   left: 0%;
@@ -301,10 +292,97 @@ html {
   border-radius: 50%;
 }
 
-.feed-form{
-  border: 0.01em solid gray;
+.user-feed {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  margin-left: 20vw;
+  padding: 1em 1em 2em 3em;
+  background-color:rgb(250, 250, 250);
 }
 
+.user-feed nav {
+  margin: 0 auto 1.5vw auto;
+  width: 100%;
+}
+
+.user-feed nav button {
+  border: 0.07em solid rgb(98, 7, 134);
+  border-radius: 0.3em;
+  background-color: white;
+  color: rgb(98, 7, 134);
+  font-size: 1em;
+  margin-right: 1vw;
+  padding: 1vw;
+  min-width: 20vw;
+  opacity: 1;
+  font-weight: 600;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+  
+.user-feed nav button:hover {
+  background: linear-gradient(0deg, #A24399 0%, #A24399 14.05%, #622DA5 67.84%, #622DA5 78.07%);
+  color: white;
+}
+
+.user-feed main {
+  margin-top: 1vw;
+  width: 45vw;
+}
+
+.user-feed aside {
+  margin-top: 1vw;
+  margin-left: 2vw;
+  padding: 2vw;
+  width: 18vw;
+  border: 0.07em solid #A09D9D;
+  border-radius: 0.3em;
+}
+
+.feed-form form{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 0.07em solid #A09D9D;
+  border-radius: 0.3em;
+  padding: 1vw;
+  margin-bottom: 2vw;
+  background-color: white;
+}
+
+.feed-form-bottom {
+  text-align: right;
+  margin-top: 1vw;
+}
+
+.feed-form form button{
+  border: 0.07em solid rgb(98, 7, 134);
+  border-radius: 0.3em;
+  background-color: white;
+  color: rgb(98, 7, 134);
+  font-size: 1em;
+  padding: 0.5vw 1vw;
+  min-width: 10vw;
+  opacity: 1;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.feed-form textarea{
+  font-family: 'Spartan', serif;
+  font-size: large;
+  padding: 1vw;
+  color: #5F5D5D;
+  outline: none;
+  border-color: rgb(233, 233, 233);
+  box-shadow: 0 0 1em rgb(236, 236, 236);
+}
+
+.feed-form textarea::placeholder{
+  color: #5F5D5D;
+}
 
 /* FEED FORM */
 

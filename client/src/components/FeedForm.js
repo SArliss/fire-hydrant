@@ -13,7 +13,7 @@ export default class FeedForm extends Component {
 
           <label>Create New Post</label>
       
-          <textarea rows="8" placeholder="What do you want to share?">
+          <textarea rows="6" placeholder="What do you want to share?">
           </textarea>
 
           <div className="feed-form-bottom">
