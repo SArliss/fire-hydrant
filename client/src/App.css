@@ -12,6 +12,8 @@ html {
 .App {
   display: block;
   width: 100vw;
+  padding: 0;
+  margin: 0;
   min-height: 100vh;
   font-family: 'Spartan', serif;
   color: rgb(41, 41, 43);
@@ -42,7 +44,7 @@ html {
   animation: spin 2s linear infinite;
 }
 
-/* LOGIN and REGISTER*/
+/* LOGIN & REGISTER */
 
 .logged-in{
   margin: 1em;
@@ -221,222 +223,60 @@ html {
 }
 
 
-/*User Page */
+/* USER PAGE */
 
-
-.greeting h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-  text-align: center;
-  }
-
-.greeting h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18x;
-  text-align: center;
-      }
-  
-.user-page-aside p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 38px;
-    text-align: center;
-    color: white;
-    }
-
-.user-pack h1, .user-bow h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  text-align: center;
-}
-
-.user-page {
+.user-feed {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20vw;
+  padding: 2em 3em;
+  background-color:rgb(250, 250, 250);
 }
 
-.user-page-aside{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin-top: -1em;
-  text-align: center;
-}
-
-.user-page-header {
-  width:20%;
-  margin-left: 3rem;
-  background: rgb(99,44,166);
-  background: linear-gradient(180deg, rgba(98,45,165,1) 20%, rgba(162,67,153,1) 100%);
-  color: white;
-}
-
-.user-profile-picture {
-  width: 60%;
-  border-radius: 20rem;
-  margin-left: 3em;
-}
-.userButtons {
-  border-radius: 1em;
-  background-color: #5B35A0;
-  color: white;
-  font-size: 16px;
-  border: 2px solid white;
-  padding: 10px;
-  }
-.user-posts {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}  
-
-
-/*User Feed */
-
-.feed-bottom {
-display: flex;
-flex-direction: row;
-
-
-}
-
-.feed-icons img {
-width: 4%;
-margin: 1rem;
-}
-
-.form-button { 
-border-radius: 1rem;
-padding-left: 20px;
-padding-right: 20px;
-font-weight: 700;
-
-}
-
-
-/* Nav bar  */
-.navbar{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.nav-buttons{
-  margin: 2rem;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 5px;
-  padding: 12px;
-  color: #5B35A0;
-  border: 3px solid #5B35A0;
-}
-.nav-buttons:hover {
-  margin: 2rem;
-  color:white;
-  background-color: #5B35A0;
-  background: linear-gradient(90deg, rgba(98,45,165,1) 5%, rgba(162,67,153,1) 100%);
-}
-
-/* User Feed */
-.user-feed-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-}
-.Feed-form {
-  display: flex;  
-}
-
-.form-button{
-  color: #5B35A0;
-  border: 2px solid #5B35A0;
-}
-
-.Feed-form-container {
-  width: 30vw;
-  border: 1px solid black;
-  border-radius: 1rem;
-  padding: 1rem;
-}
-
-.profile-picture {
-width: 25%;
-border-radius: 10rem;
-}
-
-textarea {
-width: 100%;
-}
-
-/*Announcements  */
-.Announcement {
-  display: flex;
-  flex-direction: row;
-  width: 30%
-}
-
-.Announcements-container h1 {
-font-size: 36px;
-
-}
-
-.Announcement-picture {
-height: 10%
-} 
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #5B35A0;
-  border: 2px solid #5B35A0;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  border-radius:1em;
-  margin-bottom: 2rem;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
+.user-profile {
   position: absolute;
-  background-color: #5B35A0;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  top: 0;
+  width: 20vw;
+  height: 200vh;
+  padding: 1em;
+  text-align: center;
+  color: white;
+  background: linear-gradient(0deg, #A24399 0%, #A24399 14.05%, #622DA5 67.84%, #622DA5 78.07%);
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+#user-profile-status a {
+  font-size: 1.2em;
+  color: rgb(230, 190, 254);
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #5B35A0;}
+.user-profile-picture{
+  width: 100%;
+  margin: 0 auto;
+}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.user-profile-info h3 {
+  margin: 0.5em auto;
+  font-weight: 500;
+}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: white;}
+.user-profile-picture img{
+  width: 70%;
+  border-radius: 50%;
+}
+
+.feed-form{
+  border: 0.01em solid gray;
+}
+
+
+/* FEED FORM */
+
+
 
 
 /* SMALL SCREEN */

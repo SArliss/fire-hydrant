@@ -1,81 +1,86 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DogPic from '../images/Dog1.jpeg';
-import BowPic from '../images/Group18.svg'
-import InvitePic from '../images/Group51.svg'
-import Navbar from './Navbar'
-import UserFeed from './UserFeed'
+import FeedForm from './FeedForm'
 
 function Header(props) {
+
   return (
+    <div className="App">
 
-    <div className="user-page">
-      <header className="user-page-header">
-        <div>
-          {props.currentUser ?
-            <div className="user-page-aside">
-              <div>
-                <Link to="/login" onClick={props.handleLogout}><p>Logout</p></Link>
-              </div >
+      {props.currentUser ?
 
-              <div className="user-profile-picture">
-                <img className="user-profile-picture" src={DogPic} alt="prof-pic"></img>
-              </div>
+        <div className="user-loggedin">
 
-              <div className="greeting">
-                {/* <h2>Derek Frank</h2> */}
-                <h1>{localStorage.getItem('name')}</h1>
-
-                <h3>Solutions Engineer</h3>
-                {/* <h1>{localStorage.getItem('position')}</h1> */}
-
-                <h3>New York, NY</h3>
-                {/* <h1>{localStorage.getItem('location')}</h1> */}
-
-              </div>
-
-              <div className="user-posts">
-                <Link to="/create-post"><button className="userButtons">Create post</button></Link>
-                <Link to="/user-posts"><button className="userButtons">See my posts</button></Link>
-              </div>
-              <br />
-
-              <div className="user-pack">
-                <hr />
-                <h1> Current Pack</h1>
-                <img src={InvitePic} alt="invite-pic" />
-                <h4> Add teammates for group messaging</h4>
-                <hr />
-                <br />
-              </div>
-
-              <div className="user-bow">
-                <h1> Bow</h1>
-                <img src={BowPic} alt="bow-pic" />
-                <h3> Messages</h3>
-                <h4> Add teammates for group messaging</h4>
-              </div>
-
+          <div className="user-profile">
+            <div id="user-profile-status">
+              <Link to="/login" onClick={props.handleLogout}><p>Logout</p></Link>
             </div>
-            :
-            <div className="guest-landing">
-              <Link to="/login"><h4>Login</h4></Link>
-              <Link to="/register"><h4>Register</h4></Link>
+
+            <div className="user-profile-picture">
+              {localStorage.getItem('first_img') && <img src={localStorage.getItem('first_img')} className="user-profile-picture" alt="profile"></img>}
             </div>
-          }
 
-      
-      </div>
+            <div className="user-profile-info">
+              {localStorage.getItem('name') && <h1>{localStorage.getItem('name').replace(/^\w/, (c) => c.toUpperCase())}</h1>}
+              {localStorage.getItem('position') && <h3>{localStorage.getItem('position').replace(/^\w/, (c) => c.toUpperCase())}</h3>}
+              {localStorage.getItem('location') && <h3>{localStorage.getItem('location').replace(/^\w/, (c) => c.toUpperCase())}</h3>}
+            </div>
+          </div>
 
-      </header>
+          <div className="user-feed">
+            <nav>
+              <button>Pack</button>
+              <button>Water Cooler</button>
+            </nav>
 
-      <div className="user-page-feed">
-        <Navbar />
-        <UserFeed />
-      </div>
+            <main>
+              <FeedForm />
+              <div>Content</div>
+              <div>Content</div>
+              <div>Content</div>
+              <div>Content</div>
+              <div>Content</div>
+            </main>
+
+            <aside>
+              <h1>Global Announcements</h1>
+              <div className="announcement">
+                <div className="announcement-photo">
+                  <img></img>
+                </div>
+                <div>
+                  <h3>Olivier Pomel</h3>
+                  <h4>Alpha Dog, CEO & Co-Founder</h4>
+                  <h4>New York</h4>
+                  <p>Apr. 19, 2020</p>
+                  <p>Covid 19 Update: In light of the global pandemic, all Datadog employees may work remotely in accordance with local health and safety regulations. Please reach out to your managers with individual questions. </p>
+                </div>
+              </div>
+              <div className="announcement">
+                <div className="announcement-photo">
+                  <img></img>
+                </div>
+                <div>
+                  <h3>Sinead McIvoy</h3>
+                  <h4>HR Business Partner</h4>
+                  <h4>Dublin</h4>
+                  <p>Mar. 17, 2020</p>
+                  <p>Happy St.Patrick’s Day everyone! Have fun and stay safe!</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        :
+
+        <div className="user-loggedout">
+          <Link to="/login"><h4>Login</h4></Link>
+          <Link to="/register"><h4>Register</h4></Link>
+        </div>
+      }
+
     </div>
-
-
   )
 }
 
