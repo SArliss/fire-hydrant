@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FeedForm from './FeedForm'
+import FeedForm from './FeedForm';
+import logo from '../images/datadog-logo.png';
 
 function Header(props) {
 
 
   return (
-    
+
     <div className="App">
 
       {props.currentUser ?
@@ -77,7 +78,10 @@ function Header(props) {
         :
 
         <div className="user-loggedout">
-          <h1>In order to access the Fire Hydrant feed, you must have an account.</h1>
+          <div className="header-logo">
+            <img src={logo} alt="datadog logo" ></img>
+          </div>
+          <h3>In order to access the Fire Hydrant feed, you must have an account.</h3>
           <Link to="/login"><button>Login</button></Link>
           <br></br>
           <Link to="/register"><button>Register</button></Link>

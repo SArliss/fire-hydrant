@@ -228,6 +228,10 @@ html {
 .user-loggedout {
   display: block;
   padding: 3vw;
+  color: rgb(98, 7, 134);
+  margin: 0 auto;
+  border-left: 1em solid rgb(98, 7, 134);;
+  height: 100vh;
 }
 
 .user-loggedout svg{
