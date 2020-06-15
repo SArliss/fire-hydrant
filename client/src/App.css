@@ -281,6 +281,10 @@ html {
   color: rgb(230, 190, 254);
 }
 
+#user-profile-status a:hover {
+  color: rgb(238, 82, 178);
+}
+
 .user-profile-picture{
   width: 100%;
   margin: 0 auto;
@@ -399,12 +403,19 @@ html {
   background-color: white;
   color: rgb(98, 7, 134);
   font-size: 1em;
-  padding: 0.5vw 1vw;
-  min-width: 10vw;
+  margin-right: 1vw;
+  padding: 1vw;
+  min-width: 20vw;
   opacity: 1;
   font-weight: 600;
   cursor: pointer;
-}
+  transition: ease 0.5s;
+  }
+    
+  .feed-form form button:hover {
+    background: linear-gradient(0deg, #A24399 0%, #A24399 14.05%, #622DA5 67.84%, #622DA5 78.07%);
+    color: white;
+  }
 
 .feed-form textarea{
   font-family: 'Spartan', serif;
