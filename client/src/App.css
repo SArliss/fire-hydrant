@@ -292,7 +292,7 @@ html {
 }
 
 .user-profile-picture img{
-  width: 70%;
+  width: 60%;
   min-width: 8em;
   border-radius: 50%;
 }
@@ -362,8 +362,8 @@ html {
 
 .announcement-photo {
   margin: 0 auto;
-  width: 8em;
-  height: 8em;
+  width: 6em;
+  height: 6em;
   border-radius: 50%;
 }
 
@@ -497,8 +497,8 @@ html {
 }
 
 .user-profile-picture {
-  width: 7em;
-  min-width: 7em;
+  width: 6em;
+  min-width: 6em;
   margin: 0;
 }
 
@@ -516,6 +516,10 @@ html {
 .user-profile-info {
   margin: 0 1vw;
   padding: 0 2vw;
+}
+
+.user-profile-info > h1 {
+  font-size: larger;
 }
 
 .user-profile-info > h1, .user-profile-info h3 {
