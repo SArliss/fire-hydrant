@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 export default class FeedForm extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+    }
   }
   render() {
 
@@ -13,7 +15,7 @@ export default class FeedForm extends Component {
 
           <label>Create New Post</label>
       
-          <textarea rows="5" placeholder="What do you want to share?">
+          <textarea rows="4" placeholder="What do you want to share?">
           </textarea>
 
           <div className="feed-form-bottom">

@@ -3,7 +3,7 @@ import './App.css';
 import { Route, withRouter } from 'react-router-dom';
 
 // custom components 
-import { registerUser, loginUser, verifyUser, getUsers } from './services/Api-helper';
+import { registerUser, loginUser, verifyUser} from './services/Api-helper';
 import Register from './components/Register';
 import Login from './components/Login';
 import UserPage from './components/UserPage';

@@ -1,49 +1,59 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import FeedForm from './FeedForm';
 import UserProfile from './UserProfile';
 import Pack from './Pack';
 import UserLoggedOut from './UserLoggedOut';
 import Announcements from './Announcements';
 
+class Header extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      yourPosts: false,
+      allPosts: true,
+      pack: false,
+      form: true,
+      announcements: true
+    }
+  }
 
-function Header(props) {
+  render() {
+    return (
+      <div className="App">
+        {this.props.currentUser ?
+          <div className="user-loggedin">
+            <UserProfile handleLogout={this.props.handleLogout} />
 
+            <div className="user-feed">
 
-  return (
-    <div className="App">
-      {props.currentUser ?
-        <div className="user-loggedin">
-          <UserProfile handleLogout={props.handleLogout}/>
+              <nav>
+                <button onClick={e => this.setState({ pack: false, form: true, announcements: true, yourPosts: true, allPosts: false })}>Your Posts</button>
+                <button onClick={e => this.setState({ pack: false, form: true, announcements: true , yourPosts: false, allPosts: true})}>All Posts</button>
+                <button onClick={e => this.setState({ pack: true, form: false, announcements: false })}>Pack</button>
+                <a href="#global-announcements"><button onClick={e => this.setState({ announcements: true })}>Global</button></a>
+              </nav>
 
-          <div className="user-feed">
+              <main>
+                {this.state.form && <FeedForm />}
+                {this.state.pack && <Pack />}
+              </main>
 
-            <nav>
-              <button>Personal</button>
-              <button>Office</button>
-              <button>Pack</button>
-              <a href="#global-announcements"><button>Global</button></a>
-            </nav>
+              {this.state.announcements &&
+                <aside id="global-announcements">
+                  <Announcements />
+                </aside>}
 
-            <main>
-              <FeedForm />
-              <Pack />
-            </main>
-
-            <aside id="global-announcements">
-              <Announcements />
-            </aside>
+            </div>
 
           </div>
 
-        </div>
+          :
 
-        :
-
-        <UserLoggedOut handleLogin={props.handleLogin}/>
-      }
-    </div>
-  )
+          <UserLoggedOut handleLogin={this.props.handleLogin} />
+        }
+      </div>
+    )
+  }
 }
 
 export default Header;

@@ -64,7 +64,7 @@ export const verifyUser = () => {
 export const getUsers = async () => {
   try {
     const resp = await api.get('/users');
-    console.log(resp);
+    return resp.data;
   } catch (e) {
     console.log(e.response);
   }
