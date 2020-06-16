@@ -10,10 +10,10 @@ class Header extends React.Component {
     super();
     this.state = {
       yourPosts: false,
-      allPosts: true,
-      pack: false,
-      form: true,
-      announcements: true
+      allPosts: false,
+      pack: true,
+      form: false,
+      announcements: false
     }
   }
 
