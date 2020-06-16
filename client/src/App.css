@@ -582,7 +582,7 @@ html {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding: 1em 0.1em 1em 0.1em;
+  padding: 1em 0.1em 2em 0.1em;
   margin: 0 auto;
   text-align: center;
   background-color: #A24399;
@@ -601,8 +601,8 @@ html {
   position: fixed;
   justify-content: center;
   align-content: flex-start;
-  height: 6em;
-  min-height: 6em;
+  height: 5em;
+  min-height: 5em;
   width: 100%;
   padding: 1em;
   text-align: left;
