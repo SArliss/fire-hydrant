@@ -2,7 +2,7 @@ import React from 'react'
 
 const announcements = () => {
   return (
-    <div>
+    <aside>
       <h1>Global Announcements</h1>
       <div className="announcement">
         <div className="announcement-photo">
@@ -24,7 +24,7 @@ const announcements = () => {
           <p>Mar. 17, 2020<br></br>Happy St.Patrick’s Day everyone! Have fun and stay safe!</p>
         </div>
       </div>
-    </div>
+    </aside>
   )
 }
 

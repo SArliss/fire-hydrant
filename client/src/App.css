@@ -578,6 +578,18 @@ html {
   margin: 0 auto;
 }
 
+.user-feed nav{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1em 0.1em 1em 0.1em;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #A24399;
+  z-index: 3;
+  font-size: smaller;
+}
+
 .user-feed nav button:last-child {
   display: inline;
 }
@@ -626,14 +638,15 @@ html {
   margin: 0.2em auto;
 }
 
-#global-announcements {
-  padding-top: 9em;
+.user-feed{
+  padding-bottom: 5em;
 }
 
 .individual-user{
   width: 100%;
   min-height: auto;
   padding-bottom: 0.1em;
+  margin: 0.3em auto;
 }
 
 .user-info {

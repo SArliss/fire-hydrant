@@ -28,9 +28,9 @@ class UserPage extends React.Component {
 
               <nav>
                 <button onClick={e => this.setState({ pack: false, form: true, announcements: true, yourPosts: true, allPosts: false })}>Your Posts</button>
-                <button onClick={e => this.setState({ pack: false, form: true, announcements: true , yourPosts: false, allPosts: true})}>All Posts</button>
-                <button onClick={e => this.setState({ pack: true, form: false, announcements: false })}>Pack</button>
-                <a href="#global-announcements"><button onClick={e => this.setState({ announcements: true })}>Global</button></a>
+                <button onClick={e => this.setState({ pack: false, form: true, announcements: true, yourPosts: false, allPosts: true })}>All Posts</button>
+                <button onClick={e => this.setState({ pack: true, form: false, announcements: false, yourPosts: false, allPosts: false })}>Pack</button>
+                <button onClick={e => this.setState({ pack: false, form: false, announcements: true, yourPosts: false, allPosts: false })}>Global</button>
               </nav>
 
               <main>
@@ -38,10 +38,7 @@ class UserPage extends React.Component {
                 {this.state.pack && <Pack />}
               </main>
 
-              {this.state.announcements &&
-                <aside id="global-announcements">
-                  <Announcements />
-                </aside>}
+              {this.state.announcements && <Announcements />}
 
             </div>
 
