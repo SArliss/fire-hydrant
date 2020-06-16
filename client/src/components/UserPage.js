@@ -5,7 +5,7 @@ import Pack from './Pack';
 import UserLoggedOut from './UserLoggedOut';
 import Announcements from './Announcements';
 
-class Header extends React.Component {
+class UserPage extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -56,5 +56,5 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default UserPage;
 
