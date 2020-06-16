@@ -574,7 +574,7 @@ html {
 
 .user-feed {
   flex-direction: column;
-  padding: 7.5em 1em 1em 1em;
+  padding: 7em 1em 5em 1em;
   margin: 0 auto;
 }
 
@@ -637,10 +637,6 @@ html {
 
 .user-profile-info > h1, .user-profile-info h3 {
   margin: 0.2em auto;
-}
-
-.user-feed{
-  padding-bottom: 5em;
 }
 
 .individual-user{
