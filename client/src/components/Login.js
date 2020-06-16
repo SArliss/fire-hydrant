@@ -63,7 +63,7 @@ export default class Login extends Component {
                 
                 <section>
                   <div className="or-section"><p>or</p></div>
-                  <Link id="guest-button" onClick={(e) => this.props.handleLogin(e, {email: "guest@email.com", password: "1234"})}><p>Enter with a GUEST account</p></Link>
+                  <Link to= "/user" id="guest-button" onClick={(e) => this.props.handleLogin(e, {email: "guest@email.com", password: "1234"})}><p>Enter with a GUEST account</p></Link>
                   <Link to="/register"><p>Create a new account</p></Link>
                 </section>
 

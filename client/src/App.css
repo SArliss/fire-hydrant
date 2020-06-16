@@ -316,6 +316,10 @@ html {
   width: 100%;
 }
 
+.user-feed nav a{
+  text-decoration: none;
+}
+
 .user-feed nav button {
   border: 0.07em solid rgb(98, 7, 134);
   border-radius: 0.3em;
@@ -334,6 +338,10 @@ html {
 .user-feed nav button:hover {
   background: linear-gradient(0deg, #A24399 0%, #A24399 14.05%, #622DA5 67.84%, #622DA5 78.07%);
   color: white;
+}
+
+.user-feed nav button:last-child {
+  display: none;
 }
 
 .user-feed main {
@@ -403,7 +411,7 @@ html {
   background-color: white;
   color: rgb(98, 7, 134);
   font-size: 1em;
-  margin-right: 1vw;
+  margin: 0;
   padding: 1vw;
   min-width: 20vw;
   opacity: 1;
@@ -489,8 +497,12 @@ html {
 
 .user-feed {
   flex-direction: column;
-  padding: 10em 1em 5em 1em;
+  padding: 9em 1em 1em 1em;
   margin: 0 auto;
+}
+
+.user-feed nav button:last-child {
+  display: inline;
 }
 
 .user-profile {
@@ -500,8 +512,8 @@ html {
   position: fixed;
   justify-content: center;
   align-content: flex-start;
-  height: 15%;
-  min-height: 10vh;
+  height: 6em;
+  min-height: 6em;
   width: 100%;
   padding: 1em;
   text-align: left;
@@ -535,6 +547,10 @@ html {
 
 .user-profile-info > h1, .user-profile-info h3 {
   margin: 0.2em auto;
+}
+
+#global-announcements {
+  padding-top: 9em;
 }
 
 
