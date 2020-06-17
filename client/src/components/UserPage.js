@@ -12,8 +12,8 @@ class UserPage extends React.Component {
     this.state = {
       personalArticles: [],
       allArticles: [],
-      showPersonalArticles: true,
-      showAllArticles: false,
+      showPersonalArticles: false,
+      showAllArticles: true,
       pack: false,
       form: true,
       announcements: true
@@ -79,9 +79,7 @@ class UserPage extends React.Component {
                         <div key={article.id} className="single-article">
                           <p>{article.title}</p>
                           <div className="single-article-bottom">
-                            <button className="delete"
-                              onClick={e => this.deleteArticle(e, article.id)}>Delete
-                        </button>
+                            <button className="delete" onClick={e => this.deleteArticle(e, article.id)}>Delete</button>
                           </div>
                         </div>
                       ))}
@@ -96,9 +94,9 @@ class UserPage extends React.Component {
                         <div key={article.id} className="single-article">
                           <p>{article.title}</p>
                           <div className="single-article-bottom">
-                            <button className="delete"
-                              onClick={e => this.deleteArticle(e, article.id)}>Delete
-                        </button>
+                            {parseInt(article.created_by) === this.props.currentUser.id &&
+                              <button className="delete" onClick={e => this.deleteArticle(e, article.id)}>Delete</button>
+                            }
                           </div>
                         </div>
                       ))}
