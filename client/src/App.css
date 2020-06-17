@@ -407,6 +407,19 @@ html {
   animation: fadein 2s;
 }
 
+.feed-form label {
+  padding-bottom: 0;
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+  color: #5B35A0;
+  font-weight: 600;
+}
+
+.feed-form label p {
+  margin: 0 0.3em 0.1em 0.3em;
+}
+
 .feed-form-bottom {
   text-align: right;
   margin-top: 1vw;
@@ -439,11 +452,10 @@ html {
   color: #5F5D5D;
   outline: none;
   border-color: rgb(233, 233, 233);
-  box-shadow: 0 0 1em rgb(236, 236, 236);
 }
 
 .feed-form textarea::placeholder{
-  color: #5F5D5D;
+  color: #6f6d6d;
 }
 
 /* PACK */
