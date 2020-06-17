@@ -80,10 +80,20 @@ export const postArticle = async (postData) => {
   }
 }
 
-// GET ALL ARTICLES
-export const getArticles = async () => {
+// GET PERSONAL ARTICLES
+export const getPersonalArticles = async () => {
   try {
     const resp = await api.get('/articles');
+    return resp.data;
+  } catch (e) {
+    console.log(e.response);
+  }
+}
+
+// GET ALL ARTICLES
+export const getAllArticles = async () => {
+  try {
+    const resp = await api.get('/feed');
     return resp.data;
   } catch (e) {
     console.log(e.response);
