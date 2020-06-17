@@ -97,7 +97,7 @@ class UserPage extends React.Component {
                           <div>
                             {this.state.users.filter(user => user.id === parseInt(article.created_by)).map(filteredUser => (
                               <div key={filteredUser.id} className="single-article-content">
-                                <div><img src={filteredUser.first_img}></img></div>
+                                <div><img src={filteredUser.first_img} alt="article writter"></img></div>
                                 <section>
                                   <h3>{filteredUser.name}</h3>
                                   <h4>{filteredUser.position}</h4>
@@ -127,7 +127,7 @@ class UserPage extends React.Component {
                           <div>
                             {this.state.users.filter(user => user.id === parseInt(article.created_by)).map(filteredUser => (
                               <div key={filteredUser.id} className="single-article-content">
-                                <div><img src={filteredUser.first_img}></img></div>
+                                <div><img src={filteredUser.first_img} alt="article writter"></img></div>
                                 <section>
                                   <h3>{filteredUser.name}</h3>
                                   <h4>{filteredUser.position}</h4>
