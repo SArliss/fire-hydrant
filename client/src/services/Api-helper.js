@@ -60,7 +60,7 @@ export const verifyUser = () => {
   }
 }
 
-// get all users
+// GET ALL USERS
 export const getUsers = async () => {
   try {
     const resp = await api.get('/users');
@@ -70,3 +70,28 @@ export const getUsers = async () => {
   }
 }
 
+// POST TO ARTICLES
+export const postArticle = async (postData) => {
+  try {
+    const resp = await api.post('/articles', postData);
+    return resp.data;
+  } catch (e) {
+    console.log(e.response);
+  }
+}
+
+// GET ALL ARTICLES
+export const getArticles = async () => {
+  try {
+    const resp = await api.get('/articles');
+    return resp.data;
+  } catch (e) {
+    console.log(e.response);
+  }
+}
+
+// DELETE A ARTICLE
+export const deleteArticleCall = async (articleId) => {
+  const resp = await api.delete(`/articles/${articleId}`);
+  return resp.data;
+}
