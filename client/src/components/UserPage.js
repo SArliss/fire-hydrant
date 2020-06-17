@@ -4,42 +4,50 @@ import UserProfile from './UserProfile';
 import Pack from './Pack';
 import UserLoggedOut from './UserLoggedOut';
 import Announcements from './Announcements';
-import { getArticles, postArticle, deleteArticleCall, verifyUser } from '../services/Api-helper';
+import { getPersonalArticles, getAllArticles, postArticle, deleteArticleCall, verifyUser } from '../services/Api-helper';
 
 class UserPage extends React.Component {
   constructor() {
     super();
     this.state = {
-      articles: [],
-      showYourPosts: true,
-      showAllPosts: false,
+      personalArticles: [],
+      allArticles: [],
+      showPersonalArticles: true,
+      showAllArticles: false,
       pack: false,
       form: true,
       announcements: true
     }
   }
 
+  readPersonalArticles = async () => {
+    const personalArticles = await getPersonalArticles();
+    this.setState({ personalArticles });
+  }
+
   readAllArticles = async () => {
-    const articles = await getArticles();
-    this.setState({ articles });
+    const allArticles = await getAllArticles();
+    this.setState({ allArticles });
   }
 
   createArticle = async (articleData) => {
     const newArticle = await postArticle(articleData);
     this.setState({
-      todos: [...this.state.articles, newArticle]
+      personalArticles: [...this.state.personalArticles, newArticle],
+      allArticles: [...this.state.allArticles, newArticle]
     })
-    this.readAllArticles();
   }
 
   deleteArticle = async (e, articleId) => {
     e.preventDefault();
     await deleteArticleCall(articleId);
+    this.readPersonalArticles();
     this.readAllArticles();
   }
 
   componentDidMount() {
     verifyUser();
+    this.readPersonalArticles();
     this.readAllArticles();
   }
 
@@ -53,21 +61,21 @@ class UserPage extends React.Component {
             <div className="user-feed">
 
               <nav>
-                <button onClick={e => this.setState({ pack: false, form: true, announcements: true, showYourPosts: true, showAllPosts: false })}>Your Posts</button>
-                <button onClick={e => this.setState({ pack: false, form: true, announcements: true, showYourPosts: false, showAllPosts: true })}>All Posts</button>
-                <button onClick={e => this.setState({ pack: true, form: false, announcements: false, showYourPosts: false, showAllPosts: false })}>Pack</button>
-                <button onClick={e => this.setState({ pack: false, form: false, announcements: true, showYourPosts: false, showAllPosts: false })}>Global</button>
+                <button onClick={e => this.setState({ pack: false, form: true, announcements: true, showPersonalArticles: true, showAllArticles: false })}>Your Posts</button>
+                <button onClick={e => this.setState({ pack: false, form: true, announcements: true, showPersonalArticles: false, showAllArticles: true })}>All Posts</button>
+                <button onClick={e => this.setState({ pack: true, form: false, announcements: false, showPersonalArticles: false, showAllArticles: false })}>Pack</button>
+                <button onClick={e => this.setState({ pack: false, form: false, announcements: true, showPersonalArticles: false, showAllArticles: false })}>Global</button>
               </nav>
 
               <main>
                 {this.state.form && <FeedForm createArticle={this.createArticle} />}
                 {this.state.pack && <Pack />}
 
-                {this.state.showYourPosts &&
+                {this.state.showPersonalArticles &&
                   <div className="articles-wrapper">
                     <h3>Your posts</h3>
                     <div className="articles-container">
-                      {this.state.articles && this.state.articles.map(article => (
+                      {this.state.personalArticles && this.state.personalArticles.map(article => (
                         <div key={article.id} className="single-article">
                           <p>{article.title}</p>
                           <div className="single-article-bottom">
@@ -80,6 +88,24 @@ class UserPage extends React.Component {
                     </div>
                   </div>
                 }
+
+                {this.state.showAllArticles &&
+                  <div className="articles-wrapper">
+                    <div className="articles-container">
+                      {this.state.allArticles && this.state.allArticles.map(article => (
+                        <div key={article.id} className="single-article">
+                          <p>{article.title}</p>
+                          <div className="single-article-bottom">
+                            <button className="delete"
+                              onClick={e => this.deleteArticle(e, article.id)}>Delete
+                        </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                }
+
               </main>
 
               {this.state.announcements && <Announcements />}
