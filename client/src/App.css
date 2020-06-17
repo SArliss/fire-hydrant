@@ -14,7 +14,7 @@ html {
   margin: 0;
   min-height: 100vh;
   font-family: 'Spartan', serif;
-  color: rgb(41, 41, 43);
+  color: rgb(52, 52, 59);
   background-color: white;
   animation: fadein 2s;
   overflow-x: hidden;
@@ -297,8 +297,10 @@ html {
 }
 
 .user-profile-picture img{
-  width: 60%;
-  min-width: 8em;
+  width: 8em;
+  height: 8em;
+  object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
 }
 
@@ -608,15 +610,15 @@ html {
   text-align: left;
 }
 
-.user-profile-picture {
-  width: 6em;
-  min-width: 6em;
+.user-profile-picture{
+  width: 5em;
   margin: 0;
-  padding-top: 0.1em;
 }
 
 .user-profile-picture img{
-  min-width: 100%;
+  width: 5em;
+  height: 5em;
+  padding-top: 0.2em;
 }
 
 #user-profile-status {
