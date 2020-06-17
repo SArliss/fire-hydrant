@@ -377,6 +377,12 @@ html {
   font-weight: 400;
 }
 
+.announcement p:first-of-type {
+  color: grey;
+  font-size: 0.9em;
+  margin: -0.4em 0 -0.5em 0;
+}
+
 .announcement-photo {
   margin: 0 auto;
   width: 6em;
@@ -441,10 +447,10 @@ html {
   transition: ease 0.5s;
   }
     
-  .feed-form form button:hover {
+.feed-form form button:hover {
     background: linear-gradient(0deg, #A24399 0%, #A24399 14.05%, #622DA5 67.84%, #622DA5 78.07%);
     color: white;
-  }
+}
 
 .feed-form textarea{
   font-family: 'Spartan', serif;
@@ -512,6 +518,58 @@ html {
 .single-article-bottom {
   text-align: right;
   margin: 0;
+}
+
+.single-article-content{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.single-article-content img {
+  overflow: hidden;
+  border-radius: 50%;
+	width: 6em;
+  height: 6em;
+  margin: 1em 0.5em;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.single-article-content section {
+  display: flex;
+  flex: 2;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
+  padding-top: 1em;
+  margin-left: 0.5em;
+  text-align: left;
+}
+
+.single-article-content section h3,
+.single-article-content section h4,
+.single-article-content section h5,
+.single-article-content section p {
+  margin: 0.1em;
+  padding: 0.1em;
+}
+
+.single-article-content section h4 {
+  font-weight: 500;
+}
+
+.single-article-content section h5 {
+  font-weight: 500;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.single-article-content section p:first-of-type {
+  color: grey;
+  font-size: 0.9em;
+  margin-top: 1em;
 }
 
 
@@ -736,6 +794,12 @@ html {
   max-width: 8em;
 }
 
+.announcement-photo {
+  margin: 0;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+}
 
 
 

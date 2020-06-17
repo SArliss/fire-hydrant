@@ -4,7 +4,7 @@ import UserProfile from './UserProfile';
 import Pack from './Pack';
 import UserLoggedOut from './UserLoggedOut';
 import Announcements from './Announcements';
-import { getPersonalArticles, getAllArticles, postArticle, deleteArticleCall, verifyUser } from '../services/Api-helper';
+import { getPersonalArticles, getAllArticles, getUsers, postArticle, deleteArticleCall, verifyUser } from '../services/Api-helper';
 
 class UserPage extends React.Component {
   constructor() {
@@ -12,6 +12,7 @@ class UserPage extends React.Component {
     this.state = {
       personalArticles: [],
       allArticles: [],
+      users: [],
       showPersonalArticles: false,
       showAllArticles: true,
       pack: false,
@@ -28,6 +29,13 @@ class UserPage extends React.Component {
   readAllArticles = async () => {
     const allArticles = await getAllArticles();
     this.setState({ allArticles });
+  }
+
+  readUsers = async () => {
+    const users = await getUsers();
+    this.setState({
+      users
+    })
   }
 
   createArticle = async (articleData) => {
@@ -49,9 +57,17 @@ class UserPage extends React.Component {
     verifyUser();
     this.readPersonalArticles();
     this.readAllArticles();
+    this.readUsers();
   }
 
   render() {
+    const dateStyle = {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    };
+
     return (
       <div className="App">
         {this.props.currentUser ?
@@ -77,7 +93,22 @@ class UserPage extends React.Component {
                     <div className="articles-container">
                       {this.state.personalArticles && this.state.personalArticles.map(article => (
                         <div key={article.id} className="single-article">
-                          <p>{article.title}</p>
+
+                          <div>
+                            {this.state.users.filter(user => user.id === parseInt(article.created_by)).map(filteredUser => (
+                              <div key={filteredUser.id} className="single-article-content">
+                                <div><img src={filteredUser.first_img}></img></div>
+                                <section>
+                                  <h3>{filteredUser.name}</h3>
+                                  <h4>{filteredUser.position}</h4>
+                                  <h5>{filteredUser.location}</h5>
+                                  <p>{new Date(article.created_at).toLocaleDateString("en-US", dateStyle)}</p>
+                                  <p>{article.title}</p>
+                                </section>
+                              </div>
+                            ))}
+                          </div>
+
                           <div className="single-article-bottom">
                             <button className="delete" onClick={e => this.deleteArticle(e, article.id)}>Delete</button>
                           </div>
@@ -92,7 +123,22 @@ class UserPage extends React.Component {
                     <div className="articles-container">
                       {this.state.allArticles && this.state.allArticles.map(article => (
                         <div key={article.id} className="single-article">
-                          <p>{article.title}</p>
+
+                          <div>
+                            {this.state.users.filter(user => user.id === parseInt(article.created_by)).map(filteredUser => (
+                              <div key={filteredUser.id} className="single-article-content">
+                                <div><img src={filteredUser.first_img}></img></div>
+                                <section>
+                                  <h3>{filteredUser.name}</h3>
+                                  <h4>{filteredUser.position}</h4>
+                                  <h5>{filteredUser.location}</h5>
+                                  <p>{new Date(article.created_at).toLocaleDateString("en-US", dateStyle)}</p>
+                                  <p>{article.title}</p>
+                                </section>
+                              </div>
+                            ))}
+                          </div>
+
                           <div className="single-article-bottom">
                             {parseInt(article.created_by) === this.props.currentUser.id &&
                               <button className="delete" onClick={e => this.deleteArticle(e, article.id)}>Delete</button>
