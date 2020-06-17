@@ -44,7 +44,6 @@ class App extends React.Component {
     e.preventDefault();
     this.setState({ isLogging: true })
     const currentUser = await loginUser(loginData);
-    console.log(currentUser);
     if (!currentUser.errorMessage) {
       this.setState({
         currentUser,
