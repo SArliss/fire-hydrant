@@ -77,10 +77,10 @@ class UserPage extends React.Component {
             <div className="user-feed">
 
               <nav>
-                <button onClick={e => this.setState({ pack: false, form: true, announcements: true, showPersonalArticles: true, showAllArticles: false })}>Your Posts</button>
-                <button onClick={e => this.setState({ pack: false, form: true, announcements: true, showPersonalArticles: false, showAllArticles: true })}>All Posts</button>
-                <button onClick={e => this.setState({ pack: true, form: false, announcements: false, showPersonalArticles: false, showAllArticles: false })}>Pack</button>
-                <button onClick={e => this.setState({ pack: false, form: false, announcements: true, showPersonalArticles: false, showAllArticles: false })}>Global</button>
+                <button onClick={e => (this.setState({ pack: false, form: true, announcements: true, showPersonalArticles: true, showAllArticles: false }), window.scrollTo(0, 0))}>Your Posts</button>
+                <button onClick={e => (this.setState({ pack: false, form: true, announcements: true, showPersonalArticles: false, showAllArticles: true }), window.scrollTo(0, 0))}>All Posts</button>
+                <button onClick={e => (this.setState({ pack: true, form: false, announcements: false, showPersonalArticles: false, showAllArticles: false }), window.scrollTo(0, 0))}>Pack</button>
+                <button onClick={e => (this.setState({ pack: false, form: false, announcements: true, showPersonalArticles: false, showAllArticles: false }), window.scrollTo(0, 0))}>Global</button>
               </nav>
 
               <main>
@@ -89,7 +89,6 @@ class UserPage extends React.Component {
 
                 {this.state.showPersonalArticles &&
                   <div className="articles-wrapper">
-                    <h3>Your posts</h3>
                     <div className="articles-container">
                       {this.state.personalArticles && this.state.personalArticles.map(article => (
                         <div key={article.id} className="single-article">
