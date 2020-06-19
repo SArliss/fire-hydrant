@@ -35,11 +35,10 @@ _The minimum requirement for the fyre hydrant web app is to provide an online po
 <br>
 
 ### MVP Goals
-
-- _You must be logged in to have access to all content in the DB (viewing permission)_
-- _Users should have the ability to upload new post, edit and delete their own post, or comments in their post._
-- _Users should have the ability to change user settings and credentials - job title, description, about me._
-- _Users should be able to like and comment on their own post and/or other employees posts._
+- _Users can signin and signup in a safe enviroment (JWT authentication)_
+- _Users must be logged in to have access to all the content in the DB (viewing permission)_
+- _Users should have the ability to create, read, update and delete their posts_
+- _Users should be able to leave comments in posts._
 
 <br>
 
@@ -58,13 +57,7 @@ _The minimum requirement for the fyre hydrant web app is to provide an online po
 
 #### Wireframes
 
-- Desktop Landing
-
-- Login Page
-
-- Register Page
-
-- Posts Page
+- https://www.figma.com/file/zzeM74NSoNjkoY9S6a9LkP/FIREHYDRANT
 
 #### Component Hierarchy
 
@@ -73,18 +66,14 @@ _The minimum requirement for the fyre hydrant web app is to provide an online po
 src
 |__ images/
 |__ components/
-      |__ Header.js
-      |__ Logo.js
-      |__ Footer.js
-      |__ Main.js
-      |__ Posts.js
+      |__ Announcements.js
+      |__ Feedform.js
       |__ Login.js
-      |__ UserProfile.js
+      |__ Pack.js
       |__ Register.js
-      |__ UploadPost.js
-      |__ UpdatePost.js
-      |__ DeletePost.js
-      |__ Comments.js
+      |__ UserLoggedOut.js
+      |__ UserPage.js
+      |__ UserProfile.js
 |__ services/
       |__ Api-helper.js
 
@@ -113,10 +102,16 @@ database_db
 
 ## Goals & Challenges
 
- The goal is to have a 100% functioning full stack app that shows both our technical skills as a good eye for creativity and responsive design.
+The goal is to have a 100% functioning full stack app that shows both our technical skills as a good eye for creativity and responsive design.
+
+Challenge: Design the database model, identify interrelationships. 
 
 ## Post-MVP - Stretch Goals
 
+- _Add members to your pack
+- _Like and commen
+- _Ability to change user settings and credentials - job title, description, about me._
+- _Like and comment on posts._
 - _Password reset functionality_
   <br>
 - _Followers_
