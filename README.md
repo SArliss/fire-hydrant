@@ -27,10 +27,9 @@ It's difficult to stay connected with employees, on a personal and professional 
 
 ## MVP
 
-_The minimum requirement for the fyre hydrant web app is to provide an online portal where users can register and login an account with name and password, then fill out their profile info. All users can post, edit and delete the projects they are working on. Also, all users get the ability to comment on posts._
+_The minimum requirement for the fyre hydrant web app is to provide an online portal where users can login/signup for an account and fill their profile info with name, email, password, position, location and fun facts fields. All users can view, create, edit and delete posts about the projects they are working on or something else they want to share with their peers. Also, all users should get the ability to comment on posts._
 
 - Use at least 1 API to call and display information.
-- User profile content suggestions: location, timezone, weather, teams, projects, fun facts, etc.
 
 <br>
 
