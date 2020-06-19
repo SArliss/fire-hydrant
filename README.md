@@ -107,9 +107,9 @@ Challenge: Design the database model, identify interrelationships.
 
 ## Post-MVP - Stretch Goals
 
-- _Add members to your pack
-- _Like and commen
-- _Ability to change user settings and credentials - job title, description, about me._
+- Add members to your pack
+- Likes and comments on posts
+- _Ability to change user settings and credentials - position, location, fun facts._
 - _Like and comment on posts._
 - _Password reset functionality_
   <br>
@@ -117,7 +117,7 @@ Challenge: Design the database model, identify interrelationships.
   <br>
 - _Upload image instead of image url_
   - Profile picture
-  - Project image
+  - Post image
   <br>
 - _Chat Functionality_
   - Real time message to another users
