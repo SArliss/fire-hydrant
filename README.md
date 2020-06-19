@@ -107,21 +107,15 @@ Challenge: Design the database model, identify interrelationships.
 
 ## Post-MVP - Stretch Goals
 
-- Add members to your pack
-- Likes and comments on posts
-- _Ability to change user settings and credentials - position, location, fun facts._
-- _Like and comment on posts._
-- _Password reset functionality_
-  <br>
+- _Add members to your pack_
+- _Likes and comments on posts_
+- _Ability to change user settings and credentials - password, position, location, fun facts_
 - _Followers_
-  <br>
 - _Upload image instead of image url_
-  - Profile picture
-  - Post image
-  <br>
+  - _Profile picture_
+  - _Post image_
 - _Chat Functionality_
-  - Real time message to another users
-  <br>
+  - _Real time message to another users_
 - _Google maps integration with location_
 
 ## Technology / Resources used
